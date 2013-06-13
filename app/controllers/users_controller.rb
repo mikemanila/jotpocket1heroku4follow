@@ -54,6 +54,11 @@ class UsersController < ApplicationController
     @categories = @user.categories.paginate(page: params[:page])
     @themes = @user.themes.paginate(page: params[:page])
     @pieces = @user.pieces.paginate(page: params[:page])
+    
+
+    #For the "Followers/Following" data
+    @users = @user.followed_users.paginate(page: params[:page])
+
 
   end
   
