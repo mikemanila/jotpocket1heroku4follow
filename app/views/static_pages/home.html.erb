@@ -1,0 +1,37 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/piece_form' %>
+      </section>
+
+    </aside>
+    <!--<div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div> -->
+  </div>  
+<% else %>
+  <!--<div class="center hero-unit">-->
+  <div class="center">
+    <h1 style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;">Lebron 9 "Big Bang"</h1>
+    <h2>Love it easy. Share what you love in PocketGrails.
+    </h2>
+    <img alt="" src="/assets/bigbang-homepage.jpg">
+    <h2>
+      Pocketgrails is the place to share your beloved grails or even beaters to people alike.
+    </h2>
+
+    <%= link_to "Sign up now!", signup_path, 
+                                class: "btn btn-large btn-primary" %>
+  </div>
+
+  <!--<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>-->
+  <br /><br />
+<% end %> 

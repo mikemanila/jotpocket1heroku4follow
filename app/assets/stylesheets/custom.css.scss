@@ -1,0 +1,489 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+  
+}
+
+body {
+  padding-top: 60px;
+  background-color: #F5F5F5;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+/*  color: #EBB035;*/
+  color: #DD1E2F;
+  text-decoration: none;
+}
+
+/*Menu Navigation Bar - http://responsivewebinc.com/bootstrap-tutorial/change-bootstrap-navbar/*/
+.navbar{
+margin:0px 0px 10px 0px;
+}
+
+.navbar-inner > .container{
+/*width:940px;*/
+width:1080px;
+}
+
+.navbar-inner{
+border-radius:0px;
+background: #06A2CB !important; 
+background-image: none;
+background-repeat: no-repeat;
+filter: none !important;
+border-top:1px solid #06A2CB !important;
+border-bottom:1px solid #06A2CB !important;
+border-left:0px !important;
+border-right:0px !important;
+}
+
+.navbar .btn{
+background:#cc412a !important;  
+font-size:13px;
+padding:4px 10px;
+}
+
+.navbar .btn:hover{
+background:#e24e35 !important;
+}
+
+.navbar .caret{
+border-top-color:#fff !important;
+border-bottom-color:#fff !important;
+}
+/*
+.navbar .brand{
+color:#fff !important;
+text-shadow:none !important;
+}
+*/
+.navbar .nav{
+border-left:1px solid #06A2CB;
+border-right:1px solid #06A2CB;
+}
+
+.navbar .nav > li > a{
+padding:12px 15px 12px;
+color:#fff !important;
+text-shadow:none !important;
+border-right: 1px solid #06A2CB;
+border-left:1px solid #06A2CB;
+-webkit-transition:background 1s ease;
+-moz-transition:background 1s ease;
+-o-transition:background 1s ease;
+transition:background 1s ease;
+}
+
+.navbar .nav > li > a:hover{
+background:#cc412a !important;
+color:#fff !important;
+-webkit-transition:background 1s ease;
+-moz-transition:background 1s ease;
+-o-transition:background 1s ease;
+transition:background 1s ease;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .active > a:focus {
+color: #ffffff;
+box-shadow:none;
+background: #cc412a !important;
+}
+
+.dropdown-toggle{
+background: #e24e35 !important;
+}
+
+.nav-collapse a{
+font-weight:normal !important;
+text-shadow:none !important;
+}
+
+.dropdown-menu{
+background:#e24e35 !important;
+border-radius:0px !important;
+box-shadow:none !important;
+border-bottom:none !important;
+padding:0px 0px;
+margin:0px;
+}
+
+.dropdown-menu a{
+background:#e24e35 !important;
+padding:9px 10px;
+color:#fff !important;
+text-shadow:none !important;
+-webkit-transition:background 1s ease;
+-moz-transition:background 1s ease;
+-o-transition:background 1s ease;
+transition:background 1s ease;
+border-bottom:1px solid #cc412a;
+}
+
+.dropdown-menu a:hover,.dropdown-menu a:focus{
+filter:none !important;
+background:#cc412a !important;
+-webkit-transition:background 1s ease;
+-moz-transition:background 1s ease;
+-o-transition:background 1s ease;
+transition:background 1s ease;
+}
+
+.dropdown-menu::after, .dropdown-menu::before{
+border:none !important;
+}
+
+
+/* For Responsive design */
+
+
+@media (max-width: 767px){
+   .navbar{
+   margin-left:-20px;
+   margin-right:-20px;
+   }
+   .navbar .nav{
+   border:0px !important;
+   }
+   .navbar .nav > li > a{
+   border:0px !important;
+   }
+   .dropdown-menu a{
+   border-bottom:none !important;
+   }   
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+   .navbar .nav{
+   border:0px !important;
+   }
+   .navbar .nav > li > a{
+   border:0px !important;
+   }
+   .dropdown-menu a{
+   border-bottom:none !important;
+   }
+}
+
+
+
+
+
+
+
+
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    /*padding: 10px 0;
+    border-top: 1px solid $grayLighter;*/
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+  
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+/*squares*/
+#quad ul{
+  width:760px;
+  margin-bottom:20px;
+  overflow:hidden;
+  border-top:1px solid #ccc;
+}
+#quad li{
+  margin-left: 20px;
+  line-height:1.5em;
+  border-bottom:1px solid #ccc;
+  float:left;
+  display:inline;
+  width:25%;
+}
+
+#quad img {
+height: 150px;
+max-width: 150px;
+margin-bottom: 20px;
+}
+
+/*My Feed Content*/
+.span8 {
+width: 610px;
+background-color: #fff;
+padding: 5px;
+}
+
+.span4 {
+width: 290px;
+background-color: #fff;
+padding: 5px;
+}
+
+/*25 May 2013*/
+#six ul{
+  width:760px;
+  margin-bottom:20px;
+  overflow:hidden;
+  border-top:1px solid #ccc;
+}
+#six li{
+  margin-left: 20px;
+  line-height:1.5em;
+/*  border-bottom:1px solid #ccc; */
+  float:left;
+  display:inline;
+  width:16.666%;
+}
+
+#six img {
+height: 150px;
+max-width: 150px; 
+}
+
+/*For Temporary Hover behavior 26 May */
+a {
+  color: #900;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  position: relative;
+}
+
+a[title]:hover:after {
+  content: attr(title);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+
+/*Added to change the width of Container 27 May 2013*/
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 1080px;
+}
+
+/*30 May*/
+.footer {
+    position: relative;
+    /*  margin-top: -150px; /* negative value of footer height */
+    height: 150px;
+    clear:both;
+    padding-top:20px;
+    color:#666;
+} 

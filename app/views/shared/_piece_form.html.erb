@@ -1,0 +1,23 @@
+<%= form_for(@piece) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Write a Post title" %>
+  </div>
+  <div class="field">   
+    <%= f.label "Select Collection" %>
+  <%= collection_select(:piece, :theme_id, Theme.all, :id, :name, :prompt => "Please select one") %>
+  </div> 
+  <div class="field">
+    <%= f.text_field :reference, placeholder: "eBay/Sulit link here" %>
+  </div>
+
+<%= f.file_field :photo %>
+
+
+
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Write your heart out here" %>
+  </div>
+  
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

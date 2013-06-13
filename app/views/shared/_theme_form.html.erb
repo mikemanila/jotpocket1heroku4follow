@@ -1,0 +1,13 @@
+<%= form_for(@theme) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Create a new theme..." %>
+  </div>
+  <div class="field">
+    
+
+  <%= collection_select(:theme, :category_id, Category.all, :id, :name ) %>
+  </div>  
+  
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

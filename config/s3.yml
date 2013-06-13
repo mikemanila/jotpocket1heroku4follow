@@ -1,0 +1,15 @@
+#/config/s3.yml
+development:
+  bucket: jotpocket1heroku4-dev
+  access_key_id: AKIAJ4NPU46XOA3BF4SQ
+  secret_access_key: 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
+ 
+test:
+  bucket: jotpocket1heroku4-test
+  access_key_id: AKIAJ4NPU46XOA3BF4SQ
+  secret_access_key: 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
+ 
+production:
+  bucket: jotpocket1heroku4
+  access_key_id: AKIAJ4NPU46XOA3BF4SQ
+  secret_access_key: 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

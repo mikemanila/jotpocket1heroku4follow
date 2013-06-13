@@ -1,0 +1,1338 @@
+
+
+<div class="container push-body" id="outer" style="margin-top: 45px;">
+<div id="inner">
+<div class="flash-messages">
+<div class="flash-notice alert alert-block alert-success">
+<a class="close" data-dismiss="alert" href="#">×</a>
+<div class="flash-content"></div>
+</div>
+<div class="flash-alert alert alert-block alert-error">
+<a class="close" data-dismiss="alert" href="#">×</a>
+<h4></h4>
+<div class="flash-content"></div>
+</div>
+</div>
+<div id="collection-show">
+<div class="collection-show-header followable-resource">
+<div id="collection_show_collection_id">24596009</div>
+<div class="collection-show-info">
+<div class="collection-show-left pull-left">
+<div class="collection-show-info-username">
+<div class="collection-user-avatar">
+<!--<a href="/shamarlee" class="non-underlined"><img alt="shamarlee" class="avatar-image avatar-x60 " src="http://cdn-s3-3.wanelo.com/user/avatar/6895438/x60.jpg?1370205298">
+</a>-->
+<%= link_to (gravatar_for current_user, :class => "avatar-image avatar-x60 "), current_user %>
+</div>
+<div class="collection-show-info-header">
+<h1 class="editable-container">
+<span class="collection-show-info-name">
+<%= @theme.name %>
+</span>
+<img alt="Edit-icon-clear-x15" class="best-in-place-edit-icon" src="http://cdn-assets.wanelo.com/assets/edit-icon-clear-x15-9e5d3cee0dc5a1b81fde74eb041a1dd8.png">
+</h1>
+<h2>
+<!--<a href="/shamarlee" class="username" data-username="shamarlee">@shamarlee</a>-->
+<%= link_to current_user.name, current_user %>
+</h2>
+</div>
+</div>
+<div class="collection-show-info-desc-wrapper">
+<div class="collection-show-info-description">
+
+<img alt="Edit-icon-clear-x15" class="best-in-place-edit-icon" src="http://cdn-assets.wanelo.com/assets/edit-icon-clear-x15-9e5d3cee0dc5a1b81fde74eb041a1dd8.png">
+</div>
+<div class="collection-show-info-updated-at">
+updated
+<abbr class="timeago" title="12 minutes ago">16 minutes ago</abbr>
+</div>
+</div>
+</div>
+<div class="page-header-followers">
+<ul>
+<li>
+<a href="#" class="followers-count follow-count"><span class="follow-count">0</span> followers</a>
+</li>
+<li>
+<a href="#" class="button wb-primary smallish btn-follow " data-disable-with="Follow" data-method="post" data-remote="true" rel="nofollow" resource="collection">Follow</a>
+<a href="#" class="button smallish btn-unfollow wnl-hidden" data-disable-with="Following" data-method="delete" data-remote="true" rel="nofollow" resource="collection">Following</a>
+</li>
+</ul>
+</div>
+<div class="collection-show-info-link">
+<input class="autoselect-text" id="collection-url" name="collection-url" readonly="readonly" type="text" value="">
+<span class="collection-show-info-social">
+<div class="tweet-button">
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1370206057987&amp;count=none&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwanelo.com%2Fshamarlee%2Fcollections%2Fepic-wishlist&amp;size=m&amp;text=Epic%20Wishlist&amp;url=http%3A%2F%2Fwanelo.com%2Fshamarlee%2Fcollections%2Fepic-wishlist" class="twitter-share-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 20px;"></iframe>
+</div>
+<div class="fb-like collection fb_edge_widget_with_comment fb_iframe_widget" data-href="http://wanelo.com/shamarlee/collections/epic-wishlist" data-layout="button_count" data-width="100" fb-xfbml-state="rendered"><span style="height: 20px; width: 75px;"><iframe id="f2b9eb7d6" name="fd54058a4" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?api_key=121082817904614&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Dfd3a18484%26origin%3Dhttp%253A%252F%252Fwanelo.com%252Ff250eae8f8%26domain%3Dwanelo.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwanelo.com%2Fshamarlee%2Fcollections%2Fepic-wishlist&amp;node_type=link&amp;width=100&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;extended_social_context=false" style="border: none; overflow: hidden; height: 20px; width: 75px; left: 0px;"></iframe></span></div>
+</span>
+</div>
+</div>
+</div>
+<div class="content-inner">
+<div class="products-grid">
+<div class="products-thumbnails">
+  
+<% @theme.pieces.paginate(page: params[:page]).each do |piece| -%> 
+<div class="product-thumbnail-container">
+<!--<a href="/p/3467733/1070984521" alt="dangle belly button rings ? GlitZ JewelZ - laser cut CZ crystals - surgical steel 316L - bar length" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:3467733}" data-requesting-action="show_with_save">
+<img alt="dangle belly button rings ? GlitZ JewelZ - laser cut CZ crystals - surgical steel 316L - bar length" src="http://cdn-s3-3.wanelo.com/product/image/3467733/x200.jpg">
+-->
+<a href="/pieces/<%= piece.id %>" alt="<%= piece.name %>" class="activity-feed-products-link product-thumbnail" data-feed-type="Wanelo::ActivityFeed::FeedRow::Store">
+  <img alt="Coast Roxy Dress at asos.com" class="activity-feed-products-thumbnail" src=<%= piece.photo.url %>>
+  
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+
+dangle belly button rings ? GlitZ Je...
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">linda87rogerson</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+amazon.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$6.25
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/3467733/1070984521/comments" data-product-id="3467733" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-save-id="1070984521" data-attributed-user-id="6895438" data-product-id="3467733">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">7,205</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-attributed-save-id="1070984521" data-product-id="3467733">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<% end -%>
+
+<!--Start of dummy pieces-->
+<div class="product-thumbnail-container">
+<a href="#" alt="ronnie-fieg-new-balance-1300-salmon-sole" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044310}" data-requesting-action="show">
+  <img alt="Ronnie fieg new balance 1300 salmon sole" src="/assets/nb1300_taylor.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Ronnie fieg new balance 1300 salmon sole
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">taylor</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$259.99
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044310/comments" data-product-id="6044310" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5025418" data-product-id="6044310">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044310">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="Red coral round stud earrings, wirewrapped in red gold filled wire" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044309}" data-requesting-action="show">
+  <img alt="AirMax 90 Warhawks model after the P40 mustang ww2 plane" src="/assets/general.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+AirMax 90 Warhawks model 
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">Jordan Uptown</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/sianykitty">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$250.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044309/comments" data-product-id="6044309" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="34091" data-product-id="6044309">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044309">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="Lebron 8 South Beach" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044308}" data-requesting-action="show">
+  <img alt="Lebron 8 South Beach" src="/assets/lebron_8.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Lebron 8 South Beach
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">uptown2k</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$1200.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044308/comments" data-product-id="6044308" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5025418" data-product-id="6044308">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044308">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="1999" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044307}" data-requesting-action="show">
+  <img alt="1999" src="/assets/1999-x200.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+1999
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">mike</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$1000.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044307/comments" data-product-id="6044307" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="6176295" data-product-id="6044307">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044307">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+
+
+<div class="product-thumbnail-container">
+<a href="#" alt="Air Mags" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044305}" data-requesting-action="show">
+  <img alt="Air Mags" src="/assets/air_mags-x200.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Air Mags
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">dannyivan</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="#">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$3500.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044305/comments" data-product-id="6044305" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="3134559" data-product-id="6044305">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044305">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="New Ray Ban Rounded Wayfarer RB4141 601 Black/Crystal Green Lens 51mm Sunglasses:Amazon:Sports &amp; Outdoors" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044304}" data-requesting-action="show">
+  <img alt="jordan 5 fire red" src="/assets/jordan_5_fire_red.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+jordan 5 fire red
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">kurap</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+amazon.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$203.95
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044304/comments" data-product-id="6044304" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5025418" data-product-id="6044304">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044304">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="Kobe 6" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044303}" data-requesting-action="show">
+  <img alt="Kobe 6" src="/assets/kobe6.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Kobe 6
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">dequidtloves</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/obaz.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$300.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044303/comments" data-product-id="6044303" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="412289" data-product-id="6044303">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044303">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044302}" data-requesting-action="show">
+  <img alt="" src="/assets/southbeach_lebron_9.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Lebron 9 Southbeach Diet!
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">mephistowaltz</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$550.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044302/comments" data-product-id="6044302" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="7798808" data-product-id="6044302">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044302">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044300}" data-requesting-action="show">
+  <img alt="" src="/assets/lebron_10_cork.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Lebron 10 "Corks"
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">dequidtloves</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/obaz.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$350.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044300/comments" data-product-id="6044300" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="412289" data-product-id="6044300">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044300">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044299}" data-requesting-action="show">
+  <img alt="" src="/assets/jordan-5-red.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Air Jordan 5 Red Suede Raging Bull
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">Robert De Niro</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="">
+hypebeast...
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044299/comments" data-product-id="6044299" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="7013908" data-product-id="6044299">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044299">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044298}" data-requesting-action="show">
+  <img alt="" src="/assets/paranorman.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Paranormans
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">Norman</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/macys.com">
+amazon.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$500.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044298/comments" data-product-id="6044298" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="8842111" data-product-id="6044298">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044298">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="Nike Air Foamposite One 'Fighter Jet'" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044297}" data-requesting-action="show">
+  <img alt="Nike Air Foamposite One 'Fighter Jet'" src="/assets/jetfighter-foams.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail" style="display: none;">
+<div class="products-overlay-detail-name">
+Nike Air Foamposite One 'Fighter Jet'
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">kurap</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+amazon.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$300.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044297/comments" data-product-id="6044297" data-source="product grid" style="display: none;">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5025418" data-product-id="6044297" style="display: none;">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044297">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044296}" data-requesting-action="show">
+  <img alt="" src="/assets/mvp.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail" style="display: none;">
+<div class="products-overlay-detail-name">
+Lebron 10 "What the MVP"
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">kurap</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$11,000.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044296/comments" data-product-id="6044296" data-source="product grid" style="display: none;">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5025418" data-product-id="6044296" style="display: none;">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044296">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044295}" data-requesting-action="show">
+  <img alt="Cathédrale Notre Dame de Paris Print T-shirt by spacebacon" src="/assets/hornets.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Hornet
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">'bron</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/society6.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$249.99
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044295/comments" data-product-id="6044295" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5359946" data-product-id="6044295">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044295">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044294}" data-requesting-action="show">
+  <img alt="" src="/assets/jordan3.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Jordna 3 White Cement
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">dannyivan</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/society6.com">
+facebook.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$195.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044294/comments" data-product-id="6044294" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="3134559" data-product-id="6044294">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044294">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044293}" data-requesting-action="show">
+  <img alt="" src="/assets/j11breds.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail" style="display: none;">
+<div class="products-overlay-detail-name">
+Air Jordan 11 Breds
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">kurap</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+amazon.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$400.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044293/comments" data-product-id="6044293" data-source="product grid" style="display: none;">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5025418" data-product-id="6044293" style="display: none;">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044293">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044292}" data-requesting-action="show">
+  <img alt="" src="/assets/lebronxbhm.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Lebron X "Black History Month"
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">dequidtloves</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/obaz.com">
+ebay.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$299.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044292/comments" data-product-id="6044292" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="412289" data-product-id="6044292">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">2</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044292">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044291}" data-requesting-action="show">
+  <img alt="" src="/assets/kobe8easter.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+Kobe 8 Easter
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">lylaaccessories</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="">
+blackmamba
+</span>
+|
+<span class="products-overlay-detail-price">
+$179.99
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044291/comments" data-product-id="6044291" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="262543" data-product-id="6044291">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044291">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+
+<div class="product-thumbnail-container">
+<a href="#" alt="" class="product-thumbnail product-active" data-params="{&quot;product_id&quot;:6044290}" data-requesting-action="show">
+  <img alt="" src="/assets/jordan1dmp.jpg">
+<div class="products-overlay">
+<div class="products-overlay-detail">
+<div class="products-overlay-detail-name">
+jordan 1 dmp
+</div>
+<div class="products-overlay-detail-poster">
+posted by
+<span class="products-overlay-detail-username">mike</span>
+</div>
+<div class="products-overlay-detail-store">
+from
+<span class="products-overlay-detail-store-name" data-url="/store/amazon.com">
+amazon.com
+</span>
+|
+<span class="products-overlay-detail-price">
+$200.00
+</span>
+</div>
+</div>
+<div class="products-overlay-tag-it tag-product overlay-button" data-comment-url="/p/6044290/comments" data-product-id="6044290" data-source="product grid">
+<div class="products-overlay-tag-it-link products-overlay-action-link">
+tag
+</div>
+a friend
+</div>
+<div class="products-overlay-save-it overlay-button" data-attributed-user-id="5025418" data-product-id="6044290">
+<div class="products-overlay-save-it-link products-overlay-action-link">
+save
+</div>
+<span class="products-overlay-save-count">1</span>
+saves
+</div>
+<div class="products-overlay-delete-it overlay-button" data-product-id="6044290">
+<div class="products-overlay-delete-it-link">
+<i class="icon-trash">&nbsp;</i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+<!--End of dummy pieces-->
+
+
+
+
+
+
+
+</div>
+<div class="clear"></div>
+<!--<div class="page-links">
+  
+  <ul>
+    <li class="wnl-page active"><a href="/shamarlee/collections/epic-wishlist">1</a></li><li class="wnl-page"><a href="/shamarlee/collections/epic-wishlist?page=2" rel="next">2</a></li><li class="wnl-page"><a href="/shamarlee/collections/epic-wishlist?page=3">3</a></li><li class="wnl-page"><a href="/shamarlee/collections/epic-wishlist?page=4">4</a></li><li class="wnl-page"><a href="/shamarlee/collections/epic-wishlist?page=5">5</a></li><li class="wnl-page"><a href="/shamarlee/collections/epic-wishlist?page=6">6</a></li><li class="wnl-page"><a href="/shamarlee/collections/epic-wishlist?page=7">7</a></li></ul>
+    <div class="page-links-buttons">
+      <a class="page-link-disabled prev" href="javascript:void(0)" rel="prev">Previous</a>
+
+      <a class="next" href="/shamarlee/collections/epic-wishlist?page=2" rel="next">Next</a>
+
+    </div>
+</div>-->
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+<div id="footer-spacer"></div>
+</div>
+
+<!--<div class="footer-container">
+<div class="container">
+<div class="footer-facebook-like">
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/facepile.php?app_id=121082817904614" style="border:none; overflow:hidden; width:430px; height:60px;"></iframe>
+</div>
+<div class="footer-we-made-this">
+<a href="/about" alt="About Wanelo" title="About Wanelo"><img alt="Wanelo-icon" src="http://cdn-assets.wanelo.com/assets/wanelo-icon-7339b3cadebe51ebc950523c696345cb.jpeg"></a>
+<a href="/about">About</a>
+·
+<a href="/about/press">Press</a>
+·
+<a href="http://itunes.apple.com/us/app/wanelo/id550842012">iOS</a>
+·
+<a href="http://play.google.com/store/apps/details?id=com.wanelo.android">Android</a>
+<br>
+<div class="footer-secondary">
+<a href="/about/terms">Terms</a>
+·
+<a href="/about/privacy">Privacy</a>
+·
+<a href="http://help.wanelo.com">Help</a>
+·
+hello@wanelo.com
+</div>
+<br>
+</div>
+</div>
+</div> -->
+
+<div class="modal" id="verify-email-modal">
+<div class="modal-body">
+<button class="close" data-dismiss="modal">×</button>
+<h2>Please confirm your email address</h2>
+You can unlock Wanelo with a confirmed email address. Check
+<span class="current_user email">piolo_pascual@rocketmail.com</span>
+for a confirmation email from us,
+and click the link there to confirm. You can also have the email
+<a href="/users/resend_confirmation_email">sent again</a> or you can
+<a href="/settings">change your email address.</a>
+<p></p>
+<div class="centered">
+<a class="button wb-primary large aggro" data-dismiss="modal" href="#">OK</a>
+</div>
+</div>
+</div>
+
+
+
+<div class="modal" data-backdrop="static" data-items-to-follow="3" data-keyboard="false" data-step-2="http://wanelo.com/onboarding/stores" data-step-3="http://wanelo.com/onboarding/users" id="onboarding-modal">
+<div class="onboarding-modal-header">
+<div class="onboarding-modal-header-title">
+Products are posted by people like you. <br> What do you want to see?
+<div class="control-group field-gender">
+<label for="profile_gender_female"><input id="profile_gender_female" name="profile[gender]" type="radio" value="female">
+<span class="circle"></span>
+Female
+</label><label for="profile_gender_male"><input id="profile_gender_male" name="profile[gender]" type="radio" value="male">
+<span class="circle"></span>
+Male
+</label><label for="profile_gender_unspecified"><input id="profile_gender_unspecified" name="profile[gender]" type="radio" value="unspecified">
+<span class="circle"></span>
+Rather not say
+</label></div>
+</div>
+<div class="onboarding-modal-header-progress">
+<div id="progress-dots"></div>
+<a class="onboarding-modal-header-progress-next" href="#">
+<div class="button large wb-primary">
+Next
+</div>
+</a>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="onboarding-modal-body-step-1 onboarding-modal-body">
+<img alt="Onboarding" src="http://cdn-assets.wanelo.com/assets/onboarding-341f4016b99a143656e062f6734ce88b.jpg">
+</div>
+<div class="onboarding-modal-body-step-2 onboarding-modal-body"></div>
+<div class="onboarding-modal-body-step-3 onboarding-modal-body"></div>
+</div>
+
+<div class="ask-phone ask-phone-modal js-ask-phone-modal wnl-hidden" data-backdrop="static" data-keyboard="false">
+<div class="modal-body">
+<div class="ask-phone-cta">
+<h1>Enter your phone number to get the Wanelo app.</h1>
+</div>
+<div class="with-iphone">
+<span class="ui-form">
+<input class="js-input ui-input ask-phone-modal-phone" type="email">
+<a class="js-submit button wb-primary large" href="#">send it</a>
+<h4>(we will NOT store your number.)</h4>
+<div class="js-skip link-skip centered">Maybe later</div>
+</span>
+</div>
+</div>
+</div>
+
+<script>
+  //<![CDATA[
+    var vglnk = { api_url: '//api.viglink.com/api',
+                  key: "0a40a6bab737e98404cf348f466f8d8c" };
+    
+    (function(d, t) {
+      var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+      s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+               '//cdn.viglink.com/api') + '/vglnk.js';
+      var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+    }(document, 'script'));
+  //]]>
+</script>
+
+
+<script>
+  //<![CDATA[
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  //]]>
+</script>
+
+<div class="modal" id="tag-modal">
+<div class="modal-body">
+<button class="close" data-dismiss="modal">×</button>
+<form data-product-id="" data-remote="" id="tag-form" method="post">
+<h2>Tag a friend</h2>
+<div class="tag-form-info">
+Tag a Wanelo or Facebook friend to share this product with them.
+</div>
+<textarea class="modal-save-product-comment" maxlength="750" name="comment[body]" placeholder="Comment, @mention, #hashtag"></textarea>
+<a class="btn-privacy" href="#"></a>
+<input name="message_privacy" type="hidden" value="public">
+<div class="centered">
+<input class="button wb-primary large" data-disable-with=" Tagging.. " disabled="disabled" type="submit" value=" Tag ">
+</div>
+</form>
+</div>
+</div>
+
+<div class="modal" id="product-modal">
+<div class="modal-body">
+<button class="close" data-dismiss="modal">×</button>
+<div class="product-modal-content"></div>
+</div>
+</div>
+
+<div class="modal" id="save-product-modal">
+<div class="modal-body">
+<button class="close" data-dismiss="modal">×</button>
+<form action="" class="product-form" data-remote="" id="product-save-form" method="post">
+<input id="attributed_user_id" name="attributed_user_id" type="hidden">
+<input id="attributed_save_id" name="attributed_save_id" type="hidden">
+<input id="publish_photo_to_fb" name="publish_photo_to_fb" type="hidden" value="false">
+<input id="publish_photo_to_twitter" name="publish_photo_to_twitter" type="hidden" value="false">
+<div class="modal-save-product-button-container">
+<div class="modal-save-product-header">
+<h2>Saving...</h2>
+</div>
+<div class="modal-save-product-select-collection-container">
+<div class="products-select-collection">
+<input id="initial_collection" name="initial_collection" type="hidden" value="25666417">
+<input id="collection_is_new" name="collection_is_new" type="hidden" value="false">
+<div class="products-selected-collection-name-container button wb-light">
+<span class="products-selected-collection-name">Epic Wishlist</span>
+<span class="caret products-selected-collection-caret"></span>
+</div>
+<div class="products-collection-dropdown">
+<div class="dropdown-menu">
+<ul class="products-collections"><li data-collection_id="25666418" class="gifts-collection">
+  <a href="#" class:="" ""="">
+    
+      <i class="icon-gift"></i>
+    
+    Things I want as gifts
+  </a>
+</li>
+<li data-collection_id="25666417" class="">
+  <a href="#" class:="" "products-select-collection-selected"="">
+    
+    Epic Wishlist
+  </a>
+</li></ul>
+<div class="products-select-collection-add-collection">
+<button class="button wb-primary products-select-collection-add-collection-button" disabled="" type="button">
+<i class="icon-white icon-plus"></i>
+</button>
+<div class="products-select-collection-add-collection-name-container">
+<input class="products-select-collection-add-collection-name" maxlength="72" placeholder="New collection name" type="text">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<textarea class="modal-save-product-comment" maxlength="750" name="comment" placeholder="Comment, @mention, #hashtag"></textarea>
+<input class="product-save-form-submit button wb-primary large" type="submit" value=" Save ">
+</div>
+</form>
+
+</div>
+</div>
+
+<div class="modal" id="product-report-modal">
+<div class="modal-body">
+<button class="close" data-dismiss="modal">×</button>
+<div class="product-report-modal-report">
+<form accept-charset="UTF-8" action="/reports" class="new_report" data-remote="true" id="new_report" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="CsXh+mWlvWSIic82daXbG5rji7iF6gra1Gjt73V+NJM="></div>
+<h3>Why are you reporting this?</h3>
+<div class="product-report-modal-types">
+<label for="report_type_productnotavailable"><input id="report_type_productnotavailable" name="report[type]" type="radio" value="ProductNotAvailable">
+Not available
+</label><label for="report_type_productavailable"><input id="report_type_productavailable" name="report[type]" type="radio" value="ProductAvailable">
+Back in stock
+</label><label for="report_type_productincorrectprice"><input id="report_type_productincorrectprice" name="report[type]" type="radio" value="ProductIncorrectPrice">
+Incorrect price
+</label><label for="report_type_productbadimage"><input id="report_type_productbadimage" name="report[type]" type="radio" value="ProductBadImage">
+Bad image
+</label></div>
+<input id="report_reportable_id" name="report[reportable_id]" type="hidden">
+<input id="report_reportable_type" name="report[reportable_type]" type="hidden">
+<div class="centered product-feed-modal-submit">
+<input class="button wb-primary large aggro" name="commit" type="submit" value="Report it">
+<p>Thanks.</p>
+</div>
+</form>
+</div>
+<div class="product-report-modal-success">
+<h3>Thanks for the report!</h3>
+<p>We will review it and take appropriate action. Thanks for helping to maintain extreme awesomeness on Wanelo.</p>
+<div class="centered product-feed-modal-submit">
+<button class="button wb-primary large aggro" data-dismiss="modal">OK THEN</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal" id="comment-report-modal">
+<div class="modal-body">
+<button class="close" data-dismiss="modal">×</button>
+<div class="comment-report-modal-report">
+<form accept-charset="UTF-8" action="#" class="new_comment_report" data-remote="true" id="new_comment_report" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="CsXh+mWlvWSIic82daXbG5rji7iF6gra1Gjt73V+NJM="></div>
+<h3>Why are you reporting this?</h3>
+<div class="comment-report-modal-types">
+<label for="comment_report_type_commentspammy"><input id="comment_report_type_commentspammy" name="comment_report[type]" type="radio" value="CommentSpammy">
+Spammy
+</label><label for="comment_report_type_commenthashtagmisuse"><input id="comment_report_type_commenthashtagmisuse" name="comment_report[type]" type="radio" value="CommentHashtagMisuse">
+Misuses hashtags
+</label><label for="comment_report_type_commenthatefulorabusive"><input id="comment_report_type_commenthatefulorabusive" name="comment_report[type]" type="radio" value="CommentHatefulOrAbusive">
+Hateful or abusive
+</label></div>
+<div class="centered comment-feed-modal-submit">
+<input class="button wb-primary large aggro" name="commit" type="submit" value="Report it">
+<p>Thanks.</p>
+</div>
+</form>
+</div>
+<div class="comment-report-modal-success">
+<h3>Thanks for the report!</h3>
+<p>We will review it and take appropriate action. Thanks for helping to maintain extreme awesomeness on Wanelo.</p>
+<div class="centered comment-feed-modal-submit">
+<button class="button wb-primary large aggro" data-dismiss="modal">OK THEN</button>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-1.newrelic.com","112388c6d2","876120","IQ1XRkBaW1RXRExTXA4OXFFGXFhWQRkQWFwV",0,157,new Date().getTime(),"","","","",""]);</script>
+
+
+<div class="autocomplete-wrapper" style="display: none;">
+  <ul class="dropdown-menu">
+
+  </ul>
+</div><div class="nav dropdown autocomplete-wrapper search-autocomplete-wrapper" style="display: none;">
+  <ul class="dropdown-menu">
+
+  </ul>
+</div><div class="autocomplete-wrapper" style="display: none;">
+  <ul class="dropdown-menu">
+
+  </ul>
+</div><div class="autocomplete-wrapper" style="display: none;">
+  <ul class="dropdown-menu">
+
+  </ul>
+</div><script type="text/javascript" src="http://d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js"></script><script type="text/javascript" src="http://beacon-1.newrelic.com/1/112388c6d2?a=876120&amp;be=829&amp;qt=0&amp;ap=157&amp;dc=326&amp;fe=1510&amp;to=IQ1XRkBaW1RXRExTXA4OXFFGXFhWQRkQWFwV&amp;v=40&amp;jsonp=NREUM.setToken&amp;perf=%7B%22timing%22%3A%7B%22of%22%3A1370206056654%2C%20%22n%22%3A0%2C%20%22dl%22%3A827%2C%20%22di%22%3A1160%2C%20%22ds%22%3A1160%2C%20%22de%22%3A1208%2C%20%22dc%22%3A2337%2C%20%22l%22%3A2337%2C%20%22le%22%3A2437%2C%20%22r%22%3A138%2C%20%22re%22%3A396%2C%20%22f%22%3A396%2C%20%22dn%22%3A396%2C%20%22dne%22%3A396%2C%20%22c%22%3A396%2C%20%22ce%22%3A396%2C%20%22rq%22%3A397%2C%20%22rp%22%3A803%2C%20%22rpe%22%3A1054%7D%2C%20%22navigation%22%3A%7B%22rc%22%3A1%7D%7D"></script>
