@@ -64,7 +64,13 @@ from
 <div class="products-show-poster" data-poster="itsrainingminh">
 <div class="products-show-poster-details">
 From
-<a href="http://<%= piece.reference %>"><%= piece.reference %></a>
+<a href="<%= piece.reference %>"><%= piece.reference %></a>
+  <p>
+    <% if current_user?(piece.user) %>
+    <%= link_to "Delete this", piece, method: :delete,
+                                     data: { confirm: "You sure?" } %>
+  <% end %>
+  </p>
 </div>
 </div>
 <div class="products-show" data-id="5992929">
