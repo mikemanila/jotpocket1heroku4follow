@@ -4,7 +4,8 @@
     <div class="container">
       <div class="inner-container">
         <div class="product-attribution-container-user-avatar">
-          <%= link_to (gravatar_for current_user, :class => "avatar-image avatar-x200 "), current_user %> 
+          <%#= link_to (gravatar_for current_user, :class => "avatar-image avatar-x200 "), current_user %>
+          <%= link_to (gravatar_for @user, :class => "avatar-image avatar-x200 "), @user %> 
                   
         </div>
       <div class="product-attribution-container-info">
@@ -13,8 +14,8 @@
 <!--"<a href="/tags/unicorn">#unicorn</a> <a href="/tags/rainbows">#rainbows</a> <a href="/tags/cute">#cute</a> <a href="/tags/funny">#funny</a> <a href="/tags/love">#love</a> <a href="/tags/want">#want</a> <a href="/tags/need">#need</a> <a href="/tags/princess">#princess</a> <a href="/tags/castle">#castle</a> <a href="/tags/lol">#lol</a>"-->
           </div>
           <div class="products-attribution-container-info-message-smaller">
-            <%= link_to current_user.name, current_user, { :class => "products-show-poster-details-username" } %>
-
+            <%#= link_to current_user.name, current_user, { :class => "products-show-poster-details-username" } %>
+            <%= link_to @user.name, @user, { :class => "products-show-poster-details-username" } %>
             
 posted this
 to
@@ -37,7 +38,9 @@ people
 </a>saved this
 from
 <!--<a href="/itsrainingminh" class="products-show-poster-details-username">itsrainingminh</a>-->
-<%= link_to current_user.name, current_user, { :class => "products-show-poster-details-username" } %>
+<%#= link_to current_user.name, current_user, { :class => "products-show-poster-details-username" } %>
+<%= link_to @user.name, @user.name, { :class => "products-show-poster-details-username" } %>
+
 </div>
 <div class="products-show-more-savers-grid products-show-more-grid">
 <a href="#"><img alt="darmamerp" class="avatar-image avatar-x45 " src="/assets/ava1.jpg"></a>
