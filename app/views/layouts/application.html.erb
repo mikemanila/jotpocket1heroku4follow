@@ -18,6 +18,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+    <%= content_for?(:head) ? yield(:head) : '' %>
   </head>
   <body>
     <%= render 'layouts/header' %>

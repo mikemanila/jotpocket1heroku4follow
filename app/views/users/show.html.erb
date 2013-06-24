@@ -1,4 +1,11 @@
-<meta content='http://cdn-s3-1.wanelo.com/product/image/6485625/original.jpg' property='og:image'>
+<% content_for :head do %>
+  <meta property="fb:app_id" content="myid" /> 
+  <meta property="og:type"   content="sdff:post" /> 
+  <meta property="og:url"    content="<%= "http://sdff.herokuapp.com" + post_path(@post) %>" /> 
+  <meta property="og:title"  content="Sample" /> 
+  <meta property="og:image"  content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" /> 
+<% end %>  
+  
 <script type="text/javascript" async="" src="//cdn.viglink.com/api/vglnk.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" async="" src="http://cdn.mxpnl.com/libs/mixpanel-2.1.min.js"></script><script src="/assets/jquery.js?body=1" type="text/javascript"></script>
 
 <body class="layout-application users users-collections background-grey user-profile-container signed-in" data-action="collections" data-controller="users" data-events="" data-params="{&quot;user_id&quot;:5208243}">
