@@ -21,9 +21,12 @@ Jotpocket1::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
-  match '/terms', to: 'static_pages#terms'
+#  match '/terms', to: 'static_pages#terms'
+  match '/collection', to: 'static_pages#terms'
+
   #match '/privacy', to: 'static_pages#privacy'
   match '/post', to: 'static_pages#privacy'
+ 
   match '/faq', to: 'static_pages#faq'
   
   match '/recent',  to: 'pieces#recent'
