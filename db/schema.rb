@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20130612232339) do
 
   create_table "pieces", :force => true do |t|
     t.string   "name"
-    t.string   "content"
+    t.text     "content"
     t.string   "reference"
     t.integer  "theme_id"
     t.integer  "user_id"
