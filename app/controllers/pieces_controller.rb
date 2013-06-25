@@ -46,12 +46,13 @@ def create
   def show
     @piece = Piece.find(params[:id])
     
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])
+    @user = @piece.user
     #@theme = Theme.find(params[:id])
     
     #@microposts = @user.microposts.paginate(page: params[:page])
     #@categories = @user.categories.paginate(page: params[:page])
-    @themes = @user.themes.paginate(page: params[:page])
+    #@themes = @user.themes.paginate(page: params[:page])
     #@pieces = @user.pieces.paginate(page: params[:page])
   end
 
@@ -59,6 +60,7 @@ def create
     #@pieces = Piece.all
     
     @pieces = Piece.find(:all)
+
 
   end
 

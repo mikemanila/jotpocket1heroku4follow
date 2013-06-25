@@ -5,7 +5,7 @@
       <div class="inner-container">
         <div class="product-attribution-container-user-avatar">
           <%#= link_to (gravatar_for current_user, :class => "avatar-image avatar-x200 "), current_user %>
-          <%= link_to (gravatar_for @user, :class => "avatar-image avatar-x200 "), @user %> 
+          <%= link_to (gravatar_for @piece.user, :class => "avatar-image avatar-x200 "), @piece.user %> 
                   
         </div>
       <div class="product-attribution-container-info">
@@ -15,7 +15,7 @@
           </div>
           <div class="products-attribution-container-info-message-smaller">
             <%#= link_to current_user.name, current_user, { :class => "products-show-poster-details-username" } %>
-            <%= link_to @user.name, @user, { :class => "products-show-poster-details-username" } %>
+            <%= link_to @piece.user.name, @piece.user, { :class => "products-show-poster-details-username" } %>
             
 posted this
 to
@@ -39,7 +39,7 @@ people
 from
 <!--<a href="/itsrainingminh" class="products-show-poster-details-username">itsrainingminh</a>-->
 <%#= link_to current_user.name, current_user, { :class => "products-show-poster-details-username" } %>
-<%= link_to @user.name, @user.name, { :class => "products-show-poster-details-username" } %>
+<%= link_to @piece.user.name, @piece.user, { :class => "products-show-poster-details-username" } %>
 
 </div>
 <div class="products-show-more-savers-grid products-show-more-grid">
