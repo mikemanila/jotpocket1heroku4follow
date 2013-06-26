@@ -53,7 +53,8 @@ Literally Just Posted
 <div class="products-grid">
 <div class="products-thumbnails resizable" style="width: 1100px;">
   
-<% Piece.find(:all).each do |piece| -%>
+<%# Piece.find(:all).each do |piece| -%>
+<% Piece.find(:all, :order => 'id DESC').each do |piece| -%>
 <div class="product-thumbnail-container">
 <a href="/pieces/<%= piece.id %>" alt="<%= piece.name %>" class="activity-feed-products-link product-thumbnail" data-feed-type="Wanelo::ActivityFeed::FeedRow::Store">
   <img alt="Coast Roxy Dress at asos.com" class="activity-feed-products-thumbnail" src=<%= piece.photo.url %>>
